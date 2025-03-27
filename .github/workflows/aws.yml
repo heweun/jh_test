@@ -22,8 +22,8 @@ jobs:
 
       - name: Docker 이미지 빌드 및 푸시
         run: |
-          echo "${{ secrets.FRONTEND_ENV }}" > frontend/.env
-          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/react-frontend:${{ github.sha }} ./frontend
+          echo "${{ secrets.FRONTEND_ENV }}" > .env
+          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/react-frontend:${{ github.sha }} .
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/react-frontend:${{ github.sha }}
 
       - name: EC2에서 Docker 컨테이너 실행 (SSH 접속)
