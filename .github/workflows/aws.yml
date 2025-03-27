@@ -20,7 +20,7 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Docker 이미지 빌드 및 푸시
+      - name: Docker 이미지 빌드 및 푸시 도커 없으면 도커 깔기!
         run: |
           echo "${{ secrets.FRONTEND_ENV }}" > .env
           docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/react-frontend:${{ github.sha }} .
