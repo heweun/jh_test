@@ -3,6 +3,8 @@ export default function MainPage() {
     <>
       <div>메인화면</div>
       <div>으아아아</div>
+      <div>으아아아</div>
+      
     </>
   );
 }
