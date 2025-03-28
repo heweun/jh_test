@@ -25,4 +25,4 @@ EXPOSE 80
 # 앱 실행
 CMD ["npx", "serve", "-s", "build", "-l", "80"]
 
-#Hello
+#Bye
